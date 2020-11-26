@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.shop.mapper.MessageMapper">
+	<resultMap id="BaseResultMap" type="com.shop.po.Message">
+		<id column="messageid" property="messageid" jdbcType="INTEGER" />
+		<result column="message" property="message" jdbcType="VARCHAR" />
+		<result column="messagedate" property="messagedate" jdbcType="VARCHAR" />
+		<result column="uid" property="uid" jdbcType="INTEGER" />
+		
+		<result column="phone" property="phone" jdbcType="VARCHAR" />
+		<result column="qq" property="qq" jdbcType="VARCHAR" />
+		<result column="address" property="address" jdbcType="VARCHAR" />
+		<result column="nickname" property="nickname" jdbcType="VARCHAR" />
+		<association property="user" javaType="com.shop.po.User">
+			<id column="uid" property="uid" jdbcType="INTEGER" />
+			<result column="username" property="username" jdbcType="VARCHAR" />
+			<result column="password" property="password" jdbcType="VARCHAR" />
+			<result column="name" property="name" jdbcType="VARCHAR" />
+			<result column="email" property="email" jdbcType="VARCHAR" />
+			<result column="phone" property="phone" jdbcType="VARCHAR" />
+			<result column="addr" property="addr" jdbcType="VARCHAR" />
+			<result column="state" property="state" jdbcType="INTEGER" />
+			<result column="code" property="code" jdbcType="VARCHAR" />
+		</association>
+	</resultMap>
+	<sql id="Base_Column_List">
+		messageid, message, messagedate, uid,phone,qq,address,nickname,leibie
+	</sql>
+	
+	<!-- countAllMessage -->
+	<select id="countAllMessage" parameterType="int" resultType="int">
+		SELECT count(*) FROM Message 
+	</select>
+	 
+	<select id="findAllMessageByPage" parameterType="int"
+		resultMap="BaseResultMap">
+        SELECT Message.*,User.* FROM Message ,User WHERE 
+		Message.uid = User.`uid`  and leibie='宠物领养' order by Message.messageid desc  limit #{0},#{1}
+	</select>
+	 
+	<delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+		delete from Message
+		where messageid = #{messageid,jdbcType=INTEGER} and leibie='宠物领养'
+	</delete>
+	 
+	<insert id="insert" parameterType="com.shop.po.Message"
+		useGeneratedKeys="true" keyProperty="messageid">
+		insert into Message (messageid, message, messagedate, uid,phone,qq,address,nickname)
+		values
+		(
+		#{messageid,jdbcType=INTEGER},
+		#{message,jdbcType=VARCHAR},
+		#{messagedate,jdbcType=VARCHAR},
+		#{uid,jdbcType=INTEGER},
+		#{phone,jdbcType=VARCHAR},
+		#{qq,jdbcType=VARCHAR},
+		#{address,jdbcType=VARCHAR},
+		#{nickname,jdbcType=VARCHAR}
+		)
+	</insert>
+	<insert id="insertSelective" parameterType="com.shop.po.Message">
+		insert into Message
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="messageid != null">
+				messageid,
+			</if>
+			<if test="message != null">
+				message,
+			</if>
+			<if test="messagedate != null">
+				messagedate,
+			</if>
+			<if test="uid != null">
+				uid,
+			</if>
+			<if test="phone != null">
+				phone,
+			</if>
+			<if test="qq != null">
+				qq,
+			</if>
+			<if test="address != null">
+				uaddress,
+			</if>
+			<if test="nickname != null">
+				nickname,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="messageid != null">
+				#{messageid,jdbcType=INTEGER},
+			</if>
+			<if test="message != null">
+				#{message,jdbcType=VARCHAR},
+			</if>
+			<if test="messagedate != null">
+				#{messagedate,jdbcType=VARCHAR},
+			</if>
+			<if test="uid != null">
+				#{uid,jdbcType=INTEGER},
+				 
+			</if>
+			<if test="phone != null">
+				 
+				#{phone,jdbcType=VARCHAR},
+				 
+			</if>
+			<if test="qq != null">
+				 
+				#{qq,jdbcType=VARCHAR},
+				 
+			</if>
+			<if test="address != null">
+			 
+				#{address,jdbcType=VARCHAR},
+				 
+			</if>
+			<if test="nickname != null">
+				
+				#{nickname,jdbcType=VARCHAR},
+			</if>
+		</trim>
+	</insert>
+	
+</mapper>

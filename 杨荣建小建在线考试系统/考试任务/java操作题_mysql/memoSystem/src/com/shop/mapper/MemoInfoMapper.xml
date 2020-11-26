@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.shop.mapper.MemoInfoMapper">
+	<resultMap id="BaseResultMap" type="com.shop.po.Memoinfo">
+		<id column="memoId" property="memoId" jdbcType="INTEGER" />
+		<result column="memoTitle" property="memoTitle" jdbcType="VARCHAR" />
+		<result column="memoContent" property="memoContent" jdbcType="INTEGER" />
+		<result column="beginTime" property="beginTime" jdbcType="DATE" />
+		<result column="endTime" property="endTime" jdbcType="DATE" />
+		<result column="userId" property="userId" jdbcType="INTEGER" />
+	</resultMap>
+	<select id="selectAll" resultMap="BaseResultMap" >
+		select memoId,memoTitle,memoContent,beginTime,endTime,userId from memoinfo
+	</select>
+	 <delete id="deletebykey" parameterType="java.lang.Integer">
+		delete from memoinfo where memoId = #{memoId,jdbcType=INTEGER}
+	</delete>
+</mapper>

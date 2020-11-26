@@ -1,0 +1,15 @@
+运行环境：jdk1.6
+数据库：sqlserver2000+sp3补丁（必须安装SqlServer2000数据库的sp3补丁）
+服务器:tomcat5.5
+开发工具: myeclips5.5
+
+附加数据库：xkxt_Data.MDF
+采用jdbc数据源连接方式，数据库用户名：sa 密码：123
+
+http://localhost:8080/xkxt/
+学生 1004 密码 111
+
+
+http://localhost:8080/xkxt/admin/login.jsp
+管理员 admin 密码 024admin
+教师 tom 密码 111

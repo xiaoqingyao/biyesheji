@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.shop.mapper.ArticleMapper">
+	<resultMap id="BaseResultMap2" type="com.shop.po.Article">
+		<id column="id" property="id" jdbcType="INTEGER" />
+		<result column="uid" property="uid" jdbcType="INTEGER" />
+		<result column="nickname" property="nickname" jdbcType="VARCHAR" />
+		<result column="title" property="title" jdbcType="VARCHAR" />
+		<result column="content" property="content" jdbcType="VARCHAR" />
+		<result column="pubdate" property="pubdate" jdbcType="VARCHAR" />
+		<result column="fujian" property="fujian" jdbcType="VARCHAR" />
+		<result column="likecount" property="likecount" jdbcType="INTEGER" />
+	</resultMap>
+ 
+	<select id="find"  resultMap="BaseResultMap2"   parameterType="com.shop.po.Article" >
+		SELECT id,title,content,pubdate,fujian,uid,nickname,likecount FROM article where id= #{id,jdbcType=INTEGER}
+	</select>
+	 
+	 	<select id="findAll"  resultMap="BaseResultMap2"   parameterType="com.shop.po.Article" >
+		SELECT id,title,content,pubdate,fujian,uid,nickname,likecount FROM article
+	</select>
+	
+	
+	<insert id="insert" parameterType="com.shop.po.Article"
+		useGeneratedKeys="true" keyProperty="id">
+		insert into article (title,content,pubdate,fujian,uid,nickname,likecount)
+		values
+		(
+		#{title,jdbcType=VARCHAR},
+		#{content,jdbcType=VARCHAR},
+		#{pubdate,jdbcType=VARCHAR},
+		#{fujian,jdbcType=VARCHAR},
+		#{uid,jdbcType=INTEGER},
+		#{nickname,jdbcType=VARCHAR},
+		#{likecount,jdbcType=INTEGER}
+		)
+	</insert>
+	 <update id="AddLike" parameterType="java.lang.Integer" >
+    	update article set likecount=likecount+1 where id=#{id,jdbcType=INTEGER}
+  	</update>
+</mapper>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.shop.mapper.NoticeMapper">
+	<resultMap id="BaseResultMap" type="com.shop.po.Notice">
+		<id column="id" property="id" jdbcType="INTEGER" />
+		<result column="leibie" property="leibie" jdbcType="VARCHAR" />
+		<result column="content" property="content" jdbcType="VARCHAR" />
+	</resultMap>
+	<sql id="Base_Column_List">
+		id,content,leibie
+	</sql>
+	
+	<select id="GetNotice"  resultType="java.lang.String"   parameterType="java.lang.Integer" >
+		SELECT content FROM notice where id=1
+	</select>
+	 
+	 
+	 
+	<insert id="insertNotice" parameterType="com.shop.po.Notice"
+		useGeneratedKeys="true" keyProperty="id">
+		insert into Notice (id, leibie, content)
+		values
+		(#{id,jdbcType=INTEGER},
+		#{leibie,jdbcType=VARCHAR},
+		#{content,jdbcType=VARCHAR}
+	</insert>
+
+</mapper>

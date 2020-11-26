@@ -1,0 +1,11 @@
+D:\01Project\04毕业设计\杨荣建小建在线考试系统\03第二次任务\net操作题\MemoSystem\Model\bin\Debug\Model.dll
+D:\01Project\04毕业设计\杨荣建小建在线考试系统\03第二次任务\net操作题\MemoSystem\Model\bin\Debug\Model.pdb
+D:\01Project\04毕业设计\杨荣建小建在线考试系统\03第二次任务\net操作题\MemoSystem\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+D:\01Project\04毕业设计\杨荣建小建在线考试系统\03第二次任务\net操作题\MemoSystem\Model\obj\Debug\Model.dll
+D:\01Project\04毕业设计\杨荣建小建在线考试系统\03第二次任务\net操作题\MemoSystem\Model\obj\Debug\Model.pdb
+D:\01Project\09毕业设计\杨荣建小建在线考试系统\03第二次任务\net操作题\MemoSystem\Model\bin\Debug\Model.dll
+D:\01Project\09毕业设计\杨荣建小建在线考试系统\03第二次任务\net操作题\MemoSystem\Model\bin\Debug\Model.pdb
+D:\01Project\09毕业设计\杨荣建小建在线考试系统\03第二次任务\net操作题\MemoSystem\Model\obj\Debug\Model.csprojAssemblyReference.cache
+D:\01Project\09毕业设计\杨荣建小建在线考试系统\03第二次任务\net操作题\MemoSystem\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+D:\01Project\09毕业设计\杨荣建小建在线考试系统\03第二次任务\net操作题\MemoSystem\Model\obj\Debug\Model.dll
+D:\01Project\09毕业设计\杨荣建小建在线考试系统\03第二次任务\net操作题\MemoSystem\Model\obj\Debug\Model.pdb

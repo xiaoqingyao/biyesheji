@@ -1,0 +1,16 @@
+D:\01Project\04毕业设计\杨荣建小建在线考试系统\03第二次任务\net操作题\MemoSystem\DAL\bin\Debug\DAL.dll
+D:\01Project\04毕业设计\杨荣建小建在线考试系统\03第二次任务\net操作题\MemoSystem\DAL\bin\Debug\DAL.pdb
+D:\01Project\04毕业设计\杨荣建小建在线考试系统\03第二次任务\net操作题\MemoSystem\DAL\bin\Debug\Model.dll
+D:\01Project\04毕业设计\杨荣建小建在线考试系统\03第二次任务\net操作题\MemoSystem\DAL\bin\Debug\Model.pdb
+D:\01Project\04毕业设计\杨荣建小建在线考试系统\03第二次任务\net操作题\MemoSystem\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+D:\01Project\04毕业设计\杨荣建小建在线考试系统\03第二次任务\net操作题\MemoSystem\DAL\obj\Debug\DAL.dll
+D:\01Project\04毕业设计\杨荣建小建在线考试系统\03第二次任务\net操作题\MemoSystem\DAL\obj\Debug\DAL.pdb
+D:\01Project\09毕业设计\杨荣建小建在线考试系统\03第二次任务\net操作题\MemoSystem\DAL\bin\Debug\DAL.dll
+D:\01Project\09毕业设计\杨荣建小建在线考试系统\03第二次任务\net操作题\MemoSystem\DAL\bin\Debug\DAL.pdb
+D:\01Project\09毕业设计\杨荣建小建在线考试系统\03第二次任务\net操作题\MemoSystem\DAL\bin\Debug\Model.dll
+D:\01Project\09毕业设计\杨荣建小建在线考试系统\03第二次任务\net操作题\MemoSystem\DAL\bin\Debug\Model.pdb
+D:\01Project\09毕业设计\杨荣建小建在线考试系统\03第二次任务\net操作题\MemoSystem\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+D:\01Project\09毕业设计\杨荣建小建在线考试系统\03第二次任务\net操作题\MemoSystem\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\01Project\09毕业设计\杨荣建小建在线考试系统\03第二次任务\net操作题\MemoSystem\DAL\obj\Debug\DAL.csproj.CopyComplete
+D:\01Project\09毕业设计\杨荣建小建在线考试系统\03第二次任务\net操作题\MemoSystem\DAL\obj\Debug\DAL.dll
+D:\01Project\09毕业设计\杨荣建小建在线考试系统\03第二次任务\net操作题\MemoSystem\DAL\obj\Debug\DAL.pdb

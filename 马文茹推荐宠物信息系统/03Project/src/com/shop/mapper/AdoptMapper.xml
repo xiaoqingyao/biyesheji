@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.shop.mapper.AdoptMapper">
+	<resultMap id="BaseResultMap2" type="com.shop.po.Adopt">
+		<id column="id" property="id" jdbcType="INTEGER" />
+		<id column="uid" property="uid" jdbcType="INTEGER" />
+		<result column="mid" property="mid" jdbcType="VARCHAR" />
+		<result column="nickname" property="nickname" jdbcType="VARCHAR" />
+		<result column="qq" property="qq" jdbcType="VARCHAR" />
+		<result column="phone" property="phone" jdbcType="VARCHAR" />
+		<result column="address" property="address" jdbcType="VARCHAR" />
+		<result column="message" property="message" jdbcType="VARCHAR" />
+		<result column="messagedate" property="messagedate" jdbcType="VARCHAR" />
+		<result column="fromuid" property="fromuid" jdbcType="INTEGER" />
+	</resultMap>
+ 
+	<select id="findAllByUid"  resultMap="BaseResultMap2"   parameterType="java.lang.Integer" >
+		SELECT id,mid,uid,nickname,qq,phone,address,message,messagedate,fromuid FROM adopt where fromuid= #{fromuid,jdbcType=INTEGER}
+	</select>
+	 
+	 
+	 
+	<insert id="insert" parameterType="com.shop.po.Adopt"
+		useGeneratedKeys="true" keyProperty="id">
+		insert into adopt (mid,uid,nickname,qq,phone,address,message,messagedate,fromuid)
+		values
+		(
+		#{mid,jdbcType=INTEGER},
+		#{uid,jdbcType=INTEGER},
+		#{nickname,jdbcType=VARCHAR},
+		#{qq,jdbcType=VARCHAR},
+		#{phone,jdbcType=VARCHAR},
+		#{address,jdbcType=VARCHAR},
+		#{message,jdbcType=VARCHAR},
+		#{messagedate,jdbcType=VARCHAR},
+		#{fromuid,jdbcType=INTEGER}
+		)
+	</insert>
+
+</mapper>

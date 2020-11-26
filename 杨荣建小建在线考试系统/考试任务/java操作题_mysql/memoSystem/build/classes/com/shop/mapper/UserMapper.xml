@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.shop.mapper.UserMapper">
+	<resultMap id="BaseResultMap" type="com.shop.po.User">
+		<id column="userId" property="userId" jdbcType="INTEGER" />
+		<result column="userName" property="userName" jdbcType="VARCHAR" />
+		<result column="userSex" property="userSex" jdbcType="INTEGER" />
+		<result column="userPwd" property="userPwd" jdbcType="VARCHAR" />
+		<result column="phone" property="phone" jdbcType="VARCHAR" />
+		<result column="mail" property="mail" jdbcType="VARCHAR" />
+	</resultMap>
+	<select id="selectByExample" resultMap="BaseResultMap" 
+		parameterType="com.shop.po.User">
+		select
+		userId,userName,userSex,userPwd,phone,mail
+		from userInfo where userName=#{userName,jdbcType=VARCHAR} and userPwd=#{userPwd,jdbcType=VARCHAR}
+	</select>
+	 
+</mapper>
